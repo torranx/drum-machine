@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    background-color: #051e3e;
+}
+/* To center content */
+.flexBox {
+    display:flex;
+    width: 100vw;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Main container */
+.drumContainer {
+    min-width: 50vw;
+    max-height: 100%;
+    background-color: #451e3e;
+    display: flex;
+}
+/* Styles for DrumPads component */
+.keysContainer {
+    width: auto;
+    height:80%;
+    margin: 7% 5%;
+    justify-content: center;
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: auto auto auto;
+}
+
+.drum-pad {
+    box-sizing: border-box;
+    float: left;
+    margin: 5px;
+    border-radius: .5rem;
+    text-align: center;
+    padding:20px 0px;
+    font-size: 35px;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+/* Styles for Controls component */
+.controlContainer {
+    font-family: 'Bebas Neue', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-height: 100%;
+    width: auto;
+    margin: 5% 7%;
+}
+
+.head {
+    font-size: 60px;
+    color: white;
+}
+
+.display {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    width: 90%;
+    height: 25px;
+    background-color: #ff1e00;
+    border-radius: .15rem;
+    color: white;
+    margin-top: 15px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 70%;
+    height:7px;
+    background: white;
+    opacity: .7;
+    transition: opacity .2s;
+    border-radius: .15rem;
+    cursor: pointer;
+    outline: none;
+    margin: 20px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    appearance: none;
+    width:10px;
+    height:25px;
+    border-radius: .2rem;
+    background:rgb(226, 10, 64);
+    cursor: pointer;
+}
+
+.switchContainer {
+    color:white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.switchBox {
+    width: 65px;
+    height: 30px;
+    background-color: black;
+    margin-top: 5px;
+}
+
+.switch {
+    height: 80%;
+    width: 45%;
+    margin: 5% 5%;
+    background-color: black;
+    cursor: pointer;
+    background-color: rgb(226, 10, 64)
+}
+
+p {
+    color: rgb(216, 216, 216);
+    font-family: 'Bebas Neue', cursive;
+}
+/* For extra small devices */
+@media only screen and (max-width: 600px) {
+    .drumContainer {
+        flex-direction: column-reverse;
+        min-width: 90vw;
+        max-height: 100%;
+    }
+    
+    .keysContainer{
+        margin-top: 2%;
+    }
+
+    .drum-pad {
+        padding: 4vw 0;
+        font-size: 6vw;
+    }
+
+    .controlContainer {
+        margin-bottom: 0;
+    }
+
+    .head {
+        font-size: 10vw;
+    }
+
+    .display {
+        width: 50vw;
+        height: 3vh;
+        margin: 3%;
+    }
+    .switchContainer {
+        font-size: 6vw;
+    }
+
+    .switchBox {
+        width: 12vw;
+        height: 6vw;
+    }
+
+    
+
+}
+
+
